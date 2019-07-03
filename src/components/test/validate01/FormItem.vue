@@ -3,6 +3,7 @@
     <p>
         <label v-if="label">{{label}}</label>: 
         <input :value="value" @input="onInput" v-bind="$attrs" />
+        {{value}}
     </p>
     <p v-if="msg">message:{{msg}}</p>
   </div>
