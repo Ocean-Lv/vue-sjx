@@ -12,6 +12,11 @@ import Form from '@/components/test/validate01/Form'
 
   export default {
     name: 'Index',
+    provide() {
+      return {
+        form: this
+      };
+    },
     props:{
       props1: {
         type: Number,

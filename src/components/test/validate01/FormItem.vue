@@ -6,6 +6,7 @@
         {{value}}
     </p>
     <p v-if="msg">message:{{msg}}</p>
+    {{form.props1}}
   </div>
   
 </template>
@@ -20,6 +21,7 @@ p {
   export default {
     inheritAttrs: false,
     name: 'FormItem',
+    inject:['form'],
     props:{
       label: {
         type: String,
