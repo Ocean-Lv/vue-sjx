@@ -6,6 +6,7 @@
     </p>
     <p v-if="msg">message:{{msg}}</p>
   </div>
+  
 </template>
 
 <style lang='scss' scoped>
