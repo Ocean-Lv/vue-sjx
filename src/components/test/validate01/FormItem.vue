@@ -54,7 +54,9 @@ export default {
     },
     //生命周期 - 挂载完成（可以访问DOM元素）
     mounted() {
-      this.$on('validate', this.validate)
+      this.$on('validate', ()=> {
+        this.validate;
+      })
     },
     beforeCreate() {}, //生命周期 - 创建之前
     beforeMount() {}, //生命周期 - 挂载之前
