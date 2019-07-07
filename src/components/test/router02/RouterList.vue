@@ -1,6 +1,7 @@
 <template>
   <div>
     <h3>router list page</h3>
+    <button @click="goDetail">routerDetail</button>
   </div>
 </template>
 
@@ -36,7 +37,11 @@ h3 {
 
     mounted() {},
 
-    methods: {},
+    methods: {
+      goDetail() {
+        this.$router.push('/router/detail/2')
+      }
+    },
 
     watch: {}
 
