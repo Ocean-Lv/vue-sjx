@@ -25,7 +25,7 @@
 import SlotOne from '@/components/test/slots01/SlotOne'
 import SlotTwo from '@/components/test/slots01/SlotTwo'
 
-import Notice from '@/components/test/notice/Notice'
+import Notice from '@/components/test/notice01/Notice'
 
 
 

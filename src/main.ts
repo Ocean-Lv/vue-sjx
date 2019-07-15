@@ -14,6 +14,10 @@ import './assets/js/test.js';
 import create from "./utils/create";
 Vue.prototype.$create = create;
 
+//加载icons
+import "./icons";
+
+import './plugins/element.js'
 
 Vue.config.productionTip = false;
 

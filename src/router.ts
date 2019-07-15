@@ -10,7 +10,7 @@ import RouterIndex from '@/components/test/router02/Index.vue'
 import RouterList from '@/components/test/router02/RouterList.vue'
 import RouterDetail from '@/components/test/router02/RouterDetail.vue'
 import Validate from '@/components/test/validate01/Index.vue'
-
+import Svg from '@/components/test/svgPlug06/Index.vue'
 
 
 
@@ -77,6 +77,12 @@ const router = new Router({
       name: 'validate',
       component: Validate
     },
+    {
+      path: '/svg',
+      name: 'svg',
+      component: Svg
+    },
+    
   ]
 });
 

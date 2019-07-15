@@ -22,7 +22,7 @@ import KForm from "./Form";
 import KFormItem from "./FormItem";
 import KInput from "./Input";
 
-import Notice from "@/components/test/notice/Notice";
+import Notice from "@/components/test/notice01/Notice";
 
 export default {
   components: {
