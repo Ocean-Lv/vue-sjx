@@ -19,6 +19,10 @@ import "./icons";
 
 import './plugins/element.js'
 
+//login时加载router
+// import "./permission";
+
+
 Vue.config.productionTip = false;
 
 Vue.use(ElementUI);

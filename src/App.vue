@@ -26,6 +26,10 @@
         <li>
             <router-link to="/validate">校验插件</router-link>
         </li>
+        <li>
+            <router-link to="/siderbar">侧边导航栏siderbar</router-link>
+        </li>
+        
       </ul>
       <br />
       <br />

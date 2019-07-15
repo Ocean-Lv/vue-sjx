@@ -3,9 +3,48 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
+//login 后，axios获取
+const constRoutes = [
+  {
+    path: "/login",
+    component: () => import("@/views/Login.vue"),
+    hidden: true, // 导航菜单忽略该项
+    meta: {title: 'login', icon:'login'},
+  },
+  {
+    path: "/",
+    component: () => import("@/views/Home.vue"),
+    redirect: "/",
+    meta: {title: '首页', icon:'qq'},
+    children: [
+      {
+        path: "home",
+        component: () =>
+          import(/* webpackChunkName: "home" */ "@/views/Home.vue"),
+        name: "home",
+        meta: { 
+            title: "Home", // 导航菜单项标题
+            icon: "qq" // 导航菜单项图标
+        }
+      },
+      {
+        path: "mua",
+        component: () =>
+          import(/* webpackChunkName: "home" */ "@/views/Home.vue"),
+        name: "mua",
+        meta: { 
+            title: "波一个", // 导航菜单项标题
+            icon: "wx" // 导航菜单项图标
+        }
+      }
+    ]
+  }
+];
+
 export default new Vuex.Store({
   state: {
-    place: '天津'
+    place: '天津',
+    constRoutes: constRoutes
   },
   // 必须是同步函数（不要在此操作异步数据）
   mutations: {

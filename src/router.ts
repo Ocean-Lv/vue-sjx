@@ -11,6 +11,8 @@ import RouterList from '@/components/test/router02/RouterList.vue'
 import RouterDetail from '@/components/test/router02/RouterDetail.vue'
 import Validate from '@/components/test/validate01/Index.vue'
 import Svg from '@/components/test/svgPlug06/Index.vue'
+import Siderbar from '@/components/test/sidebar06/Index.vue'
+
 
 
 
@@ -19,6 +21,7 @@ Vue.use(Router)
 const router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
+  //login.js get token，axios将取得的router，commit vuex state. 参考：@/views/login.vue
   routes: [
     {
       path: '/',
@@ -82,7 +85,11 @@ const router = new Router({
       name: 'svg',
       component: Svg
     },
-    
+    {
+      path: '/siderbar',
+      name: 'siderbar',
+      component: Siderbar
+    },
   ]
 });
 
