@@ -11,10 +11,13 @@
       @close="handleClose"
       :collapse="isCollapse"
       unique-opened
+      router
     >
-        <template v-for="item in getRouter">
+
+     <SideItem :routers="getRouter" v-if="getRouter"></SideItem>
+        <!-- <template v-for="item in getRouter"> -->
             <!-- el-submenu: 有子集 -->
-            <el-submenu index="1" v-if="item.children" :key="item.path">
+            <!-- <el-submenu index="1" v-if="item.children" :key="item.path">
                 <template slot="title">
                 <i class="el-icon-location"></i>
                 <span slot="title">{{item.meta.title}}</span>
@@ -24,19 +27,17 @@
                     <router-link :to="item_sub.path" :key="item_sub.path">
                         <el-menu-item index="1-4">
                             <span slot="title">{{item_sub.meta.title}}</span>
-                            <!-- <el-menu-item index="1-4-1">选项1</el-menu-item> -->
                         </el-menu-item>
                     </router-link>
                 </template>
+            </el-submenu> -->
 
-
-            </el-submenu>
             <!-- el-menu-item：无子集 -->
-            <el-menu-item v-else index="4" :key="item.path">
+            <!-- <el-menu-item v-else index="4" :key="item.path">
                 <i class="el-icon-setting"></i>
                 <span slot="title">{{item.meta.title}}</span>
             </el-menu-item>
-        </template>
+        </template> -->
 
 
 
@@ -88,6 +89,8 @@
 }
 </style>
 <script>
+import SideItem from '@/components/test/sidebar06/SideItem.vue'
+
 export default {
   name: "",
   props: {
@@ -102,7 +105,9 @@ export default {
     };
   },
 
-  components: {},
+  components: {
+    SideItem
+  },
 
   computed: {
     getRouter() {

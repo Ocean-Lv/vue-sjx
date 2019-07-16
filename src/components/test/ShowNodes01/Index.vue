@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import Home from '@/views/About.vue'
 import Node from '@/components/test/ShowNodes01/Node'
 
 export default {

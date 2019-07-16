@@ -18,12 +18,12 @@ const constRoutes = [
     meta: {title: '首页', icon:'qq'},
     children: [
       {
-        path: "home",
+        path: "about",
         component: () =>
-          import(/* webpackChunkName: "home" */ "@/views/Home.vue"),
-        name: "home",
+          import(/* webpackChunkName: "home" */ "@/views/About.vue"),
+        name: "about",
         meta: { 
-            title: "Home", // 导航菜单项标题
+            title: "About", // 导航菜单项标题
             icon: "qq" // 导航菜单项图标
         }
       },

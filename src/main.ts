@@ -22,6 +22,9 @@ import './plugins/element.js'
 //login时加载router
 // import "./permission";
 
+//注册指令（按钮权限）
+// import vPermission from "./directive/permission";
+// Vue.directive("permission", vPermission);
 
 Vue.config.productionTip = false;
 

@@ -5,7 +5,20 @@ function resolve(dir) {
     return path.join(__dirname, dir)
 }
 
+// commonjs nodejs
+const port = 7070;
+const title = 'vue项目最佳实践';
+
 module.exports = {
+    // publicPath: 'best-practice',
+    // outputDir: 'dist/best-practice',
+    devServer: {
+        port,
+    },
+    configureWebpack: {
+        name: title
+    },
+
     // 配置svg规则排除icons目录中svg文件处理
     chainWebpack: config => {
         config.module.rule('svg')
