@@ -13,7 +13,7 @@ module.exports = {
     // publicPath: 'best-practice',
     // outputDir: 'dist/best-practice',
     devServer: {
-        port,
+        // port,
     },
     configureWebpack: {
         name: title
