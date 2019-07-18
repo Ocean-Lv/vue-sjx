@@ -5,7 +5,7 @@ import store from "@/store";
 
 // 1. 创建axios实例
 const service = axios.create({
-  baseURL: process.env.VUE_APP_BASE_API, // url基础地址，解决不同数据源url变化问题
+  baseURL: process.env.VUE_APP_BASE_API, // url基础地址，解决不同数据源url变化问题(.env.development/.env.production中配置)
   // withCredentials: true, // 跨域时若要发送cookies需设置该选项
   timeout: 5000 // 超时
 });
