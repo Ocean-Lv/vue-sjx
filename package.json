@@ -25,6 +25,7 @@
     "@vue/cli-service": "^3.8.0",
     "babel-plugin-component": "^1.1.1",
     "babel-preset-es2015": "^6.24.1",
+    "body-parser": "^1.19.0",
     "sass": "^1.18.0",
     "sass-loader": "^7.1.0",
     "svg-sprite-loader": "^4.1.6",

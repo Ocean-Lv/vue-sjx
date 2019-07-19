@@ -27,7 +27,7 @@ module.exports = {
 
         /**
          * 本地mock，配置服务器
-         *  npm i bodyParser -D
+         *  npm i body-parser -D
          */
         before: app => {
             // node服务器代码 基于express
