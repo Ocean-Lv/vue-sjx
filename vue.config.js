@@ -1,5 +1,6 @@
 // resolve定义一个绝对路径获取函数
 const path = require('path')
+const bodyParser = require('body-parser');
 
 function resolve(dir) {
     return path.join(__dirname, dir)
@@ -16,10 +17,12 @@ module.exports = {
         // port,
         // proxy: {
         //     // 代理 /dev-api/user/login 到 http://127.0.0.1:3000/user/login
+        //     //(匹配到VUE_APP_BASE_API(/dev-api),就转发到 http://127.0.0.1:3000)
+        //
         //     [process.env.VUE_APP_BASE_API]: {
         //       target: `http://127.0.0.1:3000/`,
         //       changeOrigin: true, // 要不要变更origin头
-        //       pathRewrite: { // 地址重写：http://127.0.0.1:3000/user/login
+        //       pathRewrite: { // 地址重写：http://127.0.0.1:3000/user/login(去掉/dev-api)
         //         ["^" + process.env.VUE_APP_BASE_API]: ""
         //       }
         //     }
