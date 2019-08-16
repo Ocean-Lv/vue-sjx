@@ -20,7 +20,9 @@ const server = {
     }
 }
 
-//async 函数总是返回一个 Promise 对象,所以你可以用then去处理结果
+// await后面只能跟随promise
+// async 函数总是返回一个 Promise 对象,所以你可以用then去处理结果
+// 也可以在async函数中返回一个非promise 列如: return 'hello world';
 server.getCodes(test_url).then(res=>{
     console.log(res)
 })
